@@ -219,6 +219,12 @@ public class CommandLineRunner extends
         + "renaming map produced should be saved")
     private String variableMapOutputFile = "";
 
+    @Option(name = "--variable_renaming_report_input",
+        hidden = true,
+        usage = "File where the serialized version of the variable "
+        + "renaming map is located")
+    private String variableMapInputFile = "";
+
     @Option(name = "--create_renaming_reports",
         hidden = true,
         handler = BooleanOptionHandler.class,
@@ -234,6 +240,12 @@ public class CommandLineRunner extends
         usage = "File where the serialized version of the property "
         + "renaming map produced should be saved")
     private String propertyMapOutputFile = "";
+
+        @Option(name = "--property_renaming_report_input",
+        hidden = true,
+        usage = "File where the serialized version of the property "
+        + "renaming map is located")
+    private String propertyMapInputFile = "";
 
     @Option(name = "--third_party",
         hidden = true,
@@ -1088,8 +1100,10 @@ public class CommandLineRunner extends
           .setJsOutputFile(flags.jsOutputFile)
           .setModule(flags.module)
           .setVariableMapOutputFile(flags.variableMapOutputFile)
+          .setVariableMapInputFile(flags.variableMapInputFile)
           .setCreateNameMapFiles(flags.createNameMapFiles)
           .setPropertyMapOutputFile(flags.propertyMapOutputFile)
+          .setPropertyMapInputFile(flags.propertyMapInputFile)
           .setCodingConvention(conv)
           .setSummaryDetailLevel(flags.summaryDetailLevel)
           .setOutputWrapper(flags.outputWrapper)
