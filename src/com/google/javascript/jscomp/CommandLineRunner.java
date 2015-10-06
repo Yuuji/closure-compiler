@@ -241,7 +241,7 @@ public class CommandLineRunner extends
         + "renaming map produced should be saved")
     private String propertyMapOutputFile = "";
 
-        @Option(name = "--property_renaming_report_input",
+    @Option(name = "--property_renaming_report_input",
         hidden = true,
         usage = "File where the serialized version of the property "
         + "renaming map is located")
